@@ -11,7 +11,7 @@
 bool __stdcall Hooks::LoadVACModule(Module* _module, char flags)
 {
 	constexpr static const char* directory = NATIVE_DIRECTORY;
-	bool directoryExists                   = std::filesystem::is_directory(directory);
+	bool directoryExists = std::filesystem::is_directory(directory);
 
 	// Create a directory to store the dumps in.
 	if (!directoryExists)
@@ -21,11 +21,10 @@ bool __stdcall Hooks::LoadVACModule(Module* _module, char flags)
 	{
 		char buffer[999];
 		const PIMAGE_DOS_HEADER dosHeader = (PIMAGE_DOS_HEADER)_module->rawModule;
-		bool validPE                      = dosHeader->e_magic == 0x4D5A || dosHeader->e_magic == 0x5A4D;
-		std::string dumpName              = "";
+		bool validPE = dosHeader->e_magic == 0x4D5A || dosHeader->e_magic == 0x5A4D;
+		std::string dumpName = "";
 
-		validPE ? dumpName = MODULE_DIRECTORY
-				: dumpName = CODE_DIRECTORY;
+		validPE ? dumpName = MODULE_DIRECTORY : dumpName = CODE_DIRECTORY;
 
 		sprintf_s(buffer, dumpName.c_str(), _module->rawModule);
 
@@ -45,7 +44,7 @@ bool __stdcall Hooks::LoadVACModule(Module* _module, char flags)
 					if (flags & 2)
 					{
 						validPE ? std::cout << "Dumped mapped module" << " (" << buffer << ")" << std::endl
-								: std::cout << "Dumped memory"		  << " (" << buffer << ")" << std::endl;
+							: std::cout << "Dumped memory"		  << " (" << buffer << ")" << std::endl;
 					}
 				}
 
