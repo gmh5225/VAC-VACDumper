@@ -8,6 +8,10 @@ Usage of VACDumper is very simple and is universally easy as pie to compile and 
 - [3] Before booting up a game, use a DLL injector to load the compiled module into steam.exe.
 - [4] After you've loaded the module and everything has gone successful, you can now start the game.
 
+# Tested On:
+- Team Fortress 2
+- Counter-Strike: Global Offensive
+
 # Output
 Binaries are stored on the C drive (C:\Modules), this can be re-configured if required.
 
