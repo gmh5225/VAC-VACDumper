@@ -17,3 +17,6 @@ Binaries are stored on the C drive (C:\Modules), this can be re-configured if re
 
 # Notice
 I am not responsible for any mis-use of this program. This program is for self-educational purposes only.
+
+# To Do
+- Find more more methods of dumping VAC relative code.
