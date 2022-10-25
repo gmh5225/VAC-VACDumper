@@ -20,3 +20,4 @@ I am not responsible for any mis-use of this program. This program is for self-e
 
 # To Do
 - Find more more methods of dumping VAC relative code.
+- Gather more information from a struct / class.
