@@ -1,4 +1,4 @@
-# VACDumper
+# VAC3_Dumper
 VAC3_Dumper is a simplistic tool used for dumping Valve Anti-Cheat code back to disk for analysis purposes. Written in C/C++.
 
 # Usage
