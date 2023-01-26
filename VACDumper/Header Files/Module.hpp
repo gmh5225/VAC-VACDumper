@@ -7,6 +7,8 @@
 class Module
 {
 public:
+	// Note - 1.26.2023 - Update this.
+	
 	std::uint32_t unCRC32;
 	HMODULE	_module;
 	void* modulePointer;
